@@ -76,10 +76,10 @@ return {
                 end,
             },
             mapping = cmp.mapping.preset.insert({
-                ['<C-p>'] = cmp.mapping.select_prev_item(cmp_select),
-                ['<C-n>'] = cmp.mapping.select_next_item(cmp_select),
+                ['<A-c>'] = cmp.mapping.select_prev_item(cmp_select),
+                ['<A-s>'] = cmp.mapping.select_next_item(cmp_select),
                 -- this determind the hothey for autocomplete
-                ['<A-f>'] = cmp.mapping.confirm({ select = true }),
+                ['<A-d>'] = cmp.mapping.confirm({ select = true }),
                 ["<C-Space>"] = cmp.mapping.complete(),
             }),
             sources = cmp.config.sources({
