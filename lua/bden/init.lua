@@ -1,14 +1,14 @@
 require("bden/remap")
 require("bden/set")
--- require("bden/packer")
 require("bden.lazy_init")
+-- require("bden.snip")
+require("bden.snips_tex")
 
--- TODO: maybe organize this better...
+-- TODO: organize this better...
 local mark = require("harpoon.mark")
 local ui = require("harpoon.ui")
 
 -- Harpoon stuff goes here.
--- 
 vim.keymap.set("n", "<leader>a", mark.add_file)
 vim.keymap.set("n", "<C-e>", ui.toggle_quick_menu)
 
