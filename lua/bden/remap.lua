@@ -21,6 +21,16 @@ end)
 vim.keymap.set('n', "<leader>ol", function ()
     vim.cmd(":lazy")
 end)
+vim.keymap.set('n', "<leader>qs", function ()
+    vim.cmd(":wq")
+end)
+vim.keymap.set('n', "<leader>qq", function ()
+    vim.cmd(":q")
+end)
+vim.keymap.set('n', "<leader>q1", function ()
+    vim.cmd(":q!")
+end)
+
 
 vim.keymap.set('n', "<leader>pd", "\"_dP")
 
