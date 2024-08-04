@@ -11,14 +11,21 @@ return {
     config = function()
         local ls = require("luasnip")
         -- think control-s like control snippet.
-        vim.keymap.set({"i"}, "<C-s>e", function() ls.expand() end,
+        vim.keymap.set({"i"}, "<A-g>e", function() ls.expand() end,
             {silent = true,
              desc = 'expands (LuaSnip)'})
 
-        vim.keymap.set({"i", "s"}, "<C-s>;", function() ls.jump(1) end,
+        vim.keymap.set({"i", "s"}, "<A-g>.", function() ls.jump(1) end,
             {silent = true,
              desc = 'jump forward (LuaSnip)'})
-        vim.keymap.set({"i", "s"}, "<C-s>,", function() ls.jump(-1) end,
+        vim.keymap.set({"i", "s"}, "<A-g>,", function() ls.jump(-1) end,
+            {silent = true,
+             desc = 'jump backward (LuaSnip)'})
+
+        vim.keymap.set({"i", "s"}, "<A-1>", function() ls.jump(1) end,
+            {silent = true,
+             desc = 'jump forward (LuaSnip)'})
+        vim.keymap.set({"i", "s"}, "<A-2>", function() ls.jump(-1) end,
             {silent = true,
              desc = 'jump backward (LuaSnip)'})
 
@@ -26,7 +33,7 @@ return {
             enable_autosnippets = true
         })
 
-        vim.keymap.set({"i", "s"}, "<C-E>", function()
+        vim.keymap.set({"i", "s"}, "<A-g>n", function()
             if ls.choice_active() then
                 ls.change_choice(1)
             end

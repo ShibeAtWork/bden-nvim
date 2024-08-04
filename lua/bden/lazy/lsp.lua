@@ -76,7 +76,7 @@ return {
                 end,
             },
             mapping = cmp.mapping.preset.insert({
-                ['<A-c>'] = cmp.mapping.select_prev_item(cmp_select),
+                ['<A-z>'] = cmp.mapping.select_prev_item(cmp_select),
                 ['<A-s>'] = cmp.mapping.select_next_item(cmp_select),
                 -- this determind the hothey for autocomplete
                 ['<A-d>'] = cmp.mapping.confirm({ select = true }),

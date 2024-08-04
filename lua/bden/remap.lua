@@ -3,8 +3,6 @@ vim.keymap.set("n", "<leader>pv", vim.cmd.Ex,
     { desc = "Open File explorer" }
 )
 
-char_under_cursor = "test"
-
 -- allows for moving selected lines as group
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv",
     { desc = "Move selected lines down" }
@@ -17,8 +15,14 @@ vim.keymap.set('n', "J", "mzJ`z",
     { desc = "Append previous line to current" }
 )
 
+vim.keymap.set('n', "<leader>fm", function ()
+    vim.cmd(":set filetype=tex")
+end)
+vim.keymap.set('n', "<leader>ol", function ()
+    vim.cmd(":lazy")
+end)
 
-vim.keymap.set('n', "<leader>p", "\"_dP")
+vim.keymap.set('n', "<leader>pd", "\"_dP")
 
 -- Alternate movement in insert mode
 vim.keymap.set('i', "<A-h>", "<Left>")
@@ -39,7 +43,7 @@ end)
 vim.keymap.set("i", "<A-,>", function ()
     vim.cmd(":PriorBlock")
 end)
-vim.keymap.set("i", "<A-0>", function ()
+vim.keymap.set("i", "<A-r>", function ()
     vim.cmd(":StartBlock")
 end)
 vim.keymap.set("i", "<A-m>s", function ()
@@ -70,8 +74,10 @@ vim.keymap.set("c", "<A-q>", "<Esc>",
     { desc = "Shortcut for the excape key!" }
 )
 
-vim.keymap.set("i", "<A-r>", "^")
-vim.keymap.set("c", "<A-r>", "^")
+vim.keymap.set("i", "<A-x>", "<Del>")
+vim.keymap.set("c", "<A-x>", "<Del>")
+vim.keymap.set("i", "<A-i>", "^")
+vim.keymap.set("c", "<A-i>", "^")
 vim.keymap.set("i", "<A-Space>", "<BS>")
 vim.keymap.set("c", "<A-Space>", "<BS>")
 vim.keymap.set("i", "<A-u>", "_")
@@ -80,17 +86,14 @@ vim.keymap.set("i", "<A-;>", "=")
 vim.keymap.set("c", "<A-;>", "=")
 vim.keymap.set("i", "<A-p>", "+")
 vim.keymap.set("c", "<A-p>", "+")
+vim.keymap.set("i", "<A-o>", "-")
+vim.keymap.set("c", "<A-o>", "-")
 vim.keymap.set("i", "<A-->", "|" )
 vim.keymap.set("c", "<A-->", "|" )
 vim.keymap.set("i", "<A-'>", "<Bslash>")
 vim.keymap.set("c", "<A-'>", "<Bslash>")
 
--- function that use the python code I have
-
 -- keybinding to clear highlighting in normal mode.
 vim.keymap.set("n", "<A-w>", ":noh<CR>",
     { desc = "[w]ipes the highlighting form your screen" }
 )
-
-
-
