@@ -1,2 +1,2 @@
 require("bden")
-print("hello")
+
