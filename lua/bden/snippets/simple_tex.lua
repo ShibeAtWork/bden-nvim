@@ -45,7 +45,7 @@ s(
      snippetType='autosnippet'
     },
     {
-        t('\\epsilion')
+        t('\\epsilon')
     }
 ),
 
@@ -63,7 +63,7 @@ s(
      snippetType='autosnippet'
     },
     {
-        t('\\varepsilion')
+        t('\\varepsilon')
     }
 ),
 
@@ -554,6 +554,15 @@ s(
 ),
 
 s(
+    {trig="s;if",
+     snippetType='autosnippet'
+    },
+    {
+        t('\\infty')
+    }
+),
+
+s(
     {trig="s;al",
      snippetType='autosnippet'
     },
@@ -563,7 +572,7 @@ s(
 ),
 
 s(
-    {trig="a;tr",
+    {trig="s;tr",
      snippetType='autosnippet'
     },
     {
@@ -572,7 +581,7 @@ s(
 ),
 
 s(
-    {trig="a;fa",
+    {trig="s;fa",
      snippetType='autosnippet'
     },
     {
@@ -765,7 +774,7 @@ s(
      snippetType='autosnippet'
     },
     {
-        t('\\')
+        t('\\partial')
     }
 ),
 
@@ -1333,6 +1342,33 @@ s(
     },
     {
         t('\\nparallel')
+    }
+),
+
+s(
+    {trig="k;as",
+     snippetType='autosnippet'
+    },
+    {
+        t('\\ast')
+    }
+),
+
+s(
+    {trig="k;wm",
+     snippetType='autosnippet'
+    },
+    {
+        t('\\mathcal{W}^p')
+    }
+),
+
+s(
+    {trig="k;dp",
+     snippetType='autosnippet'
+    },
+    {
+        t('D^p')
     }
 )
 })

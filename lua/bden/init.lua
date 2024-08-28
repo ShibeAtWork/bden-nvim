@@ -4,6 +4,10 @@ require("bden.lazy_init")
 -- require("bden.snip")
 require("bden.snips_tex")
 
+-- a hotkey for time stamps (temp)
+require("bden.timestamp")
+vim.cmd(":syntax on")
+
 -- TODO: organize this better...
 local mark = require("harpoon.mark")
 local ui = require("harpoon.ui")
