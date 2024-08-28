@@ -18,6 +18,14 @@ vim.keymap.set('n', "J", "mzJ`z",
 vim.keymap.set('n', "<leader>fm", function ()
     vim.cmd(":set filetype=tex")
 end)
+vim.keymap.set("n", "<leader>ot", function ()
+    vim.cmd(":vsp | term" )
+end)
+
+vim.keymap.set("n", "<leader>ts", function ()
+    vim.cmd(":set spell" )
+end)
+
 vim.keymap.set('n', "<leader>ol", function ()
     vim.cmd(":Lazy")
 end)
@@ -30,7 +38,9 @@ end)
 vim.keymap.set('n', "<leader>q1", function ()
     vim.cmd(":q!")
 end)
-
+vim.keymap.set('n', "<leader>lmk", function ()
+    vim.cmd(":vsp | term make.exe; cmd.exe /C start main.pdf")
+end)
 
 vim.keymap.set('n', "<leader>pd", "\"_dP")
 
@@ -88,6 +98,9 @@ vim.keymap.set("v", "<A-q>", "<Esc>",
 )
 vim.keymap.set("c", "<A-q>", "<Esc>",
     { desc = "Shortcut for the excape key!" }
+)
+vim.keymap.set("t", "<A-q>", "<C-\\><C-n>",
+    { desc = "Shortcut for exiting terminal mode" }
 )
 
 vim.keymap.set("i", "<A-x>", "<Del>")
