@@ -6,7 +6,7 @@ return {
             -- A list of parser names, or "all"
             ensure_installed = {
                 "c", "lua", "vim", "bash",
-                "python", "latex",
+                "python",
                 "vimdoc", "query", 
                 "markdown", "markdown_inline" },
 
@@ -29,6 +29,7 @@ return {
                 -- Set this to `true` if you depend on "syntax" being enabled (like for indentation).
                 -- Using this option may slow down your editor, and you may see some duplicate highlights.
                 -- Instead of true it can also be a list of languages
+                disable = { "latex" },
                 additional_vim_regex_highlighting = { "markdown" },
             },
         })

@@ -22,10 +22,10 @@ return {
             {silent = true,
              desc = 'jump backward (LuaSnip)'})
 
-        vim.keymap.set({"i", "s"}, "<A-1>", function() ls.jump(1) end,
+        vim.keymap.set({"i", "s"}, "<A-2>", function() ls.jump(1) end,
             {silent = true,
              desc = 'jump forward (LuaSnip)'})
-        vim.keymap.set({"i", "s"}, "<A-2>", function() ls.jump(-1) end,
+        vim.keymap.set({"i", "s"}, "<A-1>", function() ls.jump(-1) end,
             {silent = true,
              desc = 'jump backward (LuaSnip)'})
 
